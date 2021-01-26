@@ -6,6 +6,7 @@ use App\Http\Livewire\ShopComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\DetailsComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Controllers\SocialController;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 
@@ -25,8 +26,9 @@ Route::get('/shop',ShopComponent::class);
 Route::get('/cart',CartComponent::class)->name('product.cart');
 Route::get('/checkout',CheckoutComponent::class);
 Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
-
-
+// Login with Facebook
+Route::get('/auth/facebook',[SocialController::class,'facebookRedirect'])->name('auth.facebook');
+Route::get('/auth/facebook/callback',[SocialController::class,'loginWithFacebook']);
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');

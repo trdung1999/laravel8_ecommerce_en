@@ -163,6 +163,8 @@
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
 										@if (Cart::count() > 0)
+											<span class="index">0 items</span>
+										@else
 										<span class="index">{{ Cart::count() }} items</span>
 										@endif										
 										<span class="title">CART</span>
@@ -366,7 +368,7 @@
 								<h3 class="item-header">We Using Safe Payments:</h3>
 								<div class="item-content">
 									<div class="wrap-list-item wrap-gallery">
-										<img src="assets/images/payment.png" style="max-width: 260px;">
+										<img src="{{ asset('assets/images/payment.png') }}" style="max-width: 260px;">
 									</div>
 								</div>
 							</div>

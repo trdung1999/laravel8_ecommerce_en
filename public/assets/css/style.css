@@ -7208,3 +7208,7 @@ svg {
 .wrap-pagination-info .rounded-r-md {
     margin-left: 5px;
 }
+
+.login-fb {
+    background-color: #3a5298 !important;
+}

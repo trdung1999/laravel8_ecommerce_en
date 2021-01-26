@@ -53,7 +53,7 @@
 
 			<div class="wrap-breadcrumb">
 				<ul>
-					<li class="item-link"><a href="#" class="link">home</a></li>
+					<li class="item-link"><a href="/" class="link">home</a></li>
 					<li class="item-link"><span>login</span></li>
 				</ul>
 			</div>
@@ -83,7 +83,14 @@
 										</label>
 										<a class="link-function left-position" href="{{ route('password.request') }}" title="Forgotten password?">Forgotten password?</a>
 									</fieldset>
-									<input type="submit" class="btn btn-submit" value="Login" name="submit">
+                                    <input type="submit" class="btn btn-submit" value="Login" name="submit">
+                                    <div class="flex items-center justify-end mt-4">
+                                        <a class="btn" href="{{ route('auth.facebook') }}"
+                                            style="background: #3B5499; color: #ffffff; padding: 10px; width: 100%; text-align: center; display: block; border-radius:3px;">
+                                            Login with Facebook
+                                        </a>
+                                    </div>
+                                    {{-- <input type="submit" class="btn btn-submit" value="Login with Google" name="submit"> --}}
 								</form>
 							</div>												
 						</div>
