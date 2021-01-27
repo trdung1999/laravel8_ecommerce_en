@@ -163,9 +163,9 @@
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
 										@if (Cart::count() > 0)
-											<span class="index">0 items</span>
+											<span class="index">{{ Cart::count() }} items</span>
 										@else
-										<span class="index">{{ Cart::count() }} items</span>
+											<span class="index">0 items</span>
 										@endif										
 										<span class="title">CART</span>
 									</div>
